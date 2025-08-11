@@ -1,0 +1,1094 @@
+/* Proxima Nova font faces */
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Regular"), local("proximanova_regular"),
+       url("images/Proxima Nova/proximanova_regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Bold"), local("proximanova_bold"),
+       url("images/Proxima Nova/proximanova_bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Light"), local("proximanova_light"),
+       url("images/Proxima Nova/proximanova_light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Black"), local("proximanova_black"),
+       url("images/Proxima Nova/proximanova_black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova ExtraBold"), local("proximanova_extrabold"),
+       url("images/Proxima Nova/proximanova_extrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Druk Cyrillic Bold font */
+@font-face {
+  font-family: "Druk Cyrillic";
+  src: local("Druk Cyrillic Bold"), local("DrukCyrBold"),
+       url("images/Proxima Nova/DrukCyrBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Применяем Proxima Nova по умолчанию для всей страницы */
+html, body {
+  font-family: "Proxima Nova", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+}
+
+body { background-color: #0e2b31; overflow-x: hidden; }
+html { overflow-x: hidden; }
+
+
+.wrapper {
+    max-width: 1750px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.site-header{ position: fixed; top: 0; left:0; right:0; z-index: 100; backdrop-filter: blur(6px); background: rgba(14,43,49,0.4); }
+.site-header::after{ content:""; position:absolute; left:0; right:0; bottom:-1px; height:1px; background: rgba(255,255,255,.08); }
+.header-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 700;
+    color: #91A7A4;
+    cursor: pointer;
+    margin-top: 8px;
+
+}
+.header-logo img{ height: 40px; width:auto; display:block; }
+
+.burger-menu { color:#fff; display:flex; gap:10px; align-items:center; justify-content:center; font-size:17px; cursor:pointer; background: transparent; border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:8px 14px; }
+.burger-menu:focus-visible{ outline:2px solid #7db3ff; outline-offset:2px; }
+.burger-label{ display:inline-block; }
+.burger-dots{ opacity:.8; }
+/* ===== Modal Menu ===== */
+.menu-overlay{ position: fixed; inset: 0; display:none; z-index: 1000; }
+.menu-overlay.is-open{ display:block; }
+.menu-backdrop{ position:absolute; inset:0; background: rgba(0,0,0,0.55); backdrop-filter: blur(2px); }
+.menu-panel{ position:absolute; right:0; top:0; height:100%; width:min(480px, 90vw);background:#0b1116; color:#fff; box-shadow: -12px 0 40px rgba(0,0,0,.35); transform: translateX(100%); transition: transform .28s ease; padding: 24px; display:flex; flex-direction:column; gap: 16px; }
+.menu-overlay.is-open .menu-panel{ transform: translateX(0); }
+.menu-close{ align-self:flex-end; width:40px; height:40px; border-radius:50%; border:1px solid rgba(255,255,255,.2); background: transparent; color:#fff; font-size:28px; line-height:1; cursor:pointer; }
+.menu-title{ margin:0 0 8px; font-family:"Druk Cyrillic"; font-weight:900; font-size:40px; line-height:1; text-transform:uppercase; }
+.menu-nav{ display:flex; flex-direction:column; gap: 12px; margin-top:4px; }
+.menu-link{ font-family:"Proxima Nova"; font-weight:700; font-size:24px; line-height:120%; text-transform:uppercase; color:#e0e6ea; text-decoration:none; width:max-content; }
+.menu-link:hover{ color:#2f90ff; border-bottom:1px solid #2f90ff; }
+.menu-extra{ margin-top:auto; margin-bottom: 40px; padding-top: 16px; border-top:1px solid rgba(255,255,255,.12); display:flex; flex-direction:column; gap:8px; color:#9fb3bf; font-family:"Proxima Nova"; font-weight:600; font-size:17px; }
+.menu-nav{ margin-bottom: auto; }
+
+
+/* ===== Fancy modal (Спасибо) ===== */
+.modal{ max-width: 520px; text-align:center; padding: 28px; background: linear-gradient(105deg, rgba(25,25,25,0.75), rgba(15,226,255,0.12)); border: 1px solid rgba(47,144,255,.35); border-radius: 24px; color:#fff; position: relative; }
+.modal-title{ margin: 0 0 8px; font-family:"Druk Cyrillic"; font-weight:900; font-size:56px; line-height:1; text-transform:uppercase; }
+.modal-text{ margin:0; font-family:"Proxima Nova"; font-weight:600; font-size:18px; color:#cfd8d6; }
+.modal-close{ position:absolute; right:12px; top:12px; width:36px; height:36px; border-radius:50%; border:1px solid rgba(255,255,255,.35); background: rgba(0,0,0,.3); color:#fff; font-size:22px; line-height:1; cursor:pointer; }
+.modal-badge{ width:72px; height:72px; margin:0 auto 12px; border-radius:50%; background: radial-gradient(60% 60% at 50% 40%, #2f90ff 0%, rgba(47,144,255,.2) 100%); filter: blur(.2px); }
+
+.header-text {
+    transition: all 0.2s linear;
+}
+.header-text:hover {
+    border-bottom: 1px solid #2f90ff;
+    color: #2f90ff;
+    scale: 1.01;
+    cursor: pointer;
+}
+
+.zalog {
+    display: flex;
+    flex-direction: row;
+    margin-top: clamp(40px, 6vw, 100px);
+    gap: 30px;
+}
+.leftBlock {
+    display: flex;
+    flex-direction: column;   
+}
+
+.leftBlock-text {
+    font-family: "Druk Cyrillic";
+    font-size: clamp(40px, 7vw, 140px);
+    color: #fff;
+    line-height: 102%;
+    text-transform: uppercase;
+}
+
+.leftBlock-text-s{
+    font-size: clamp(16px, 2.2vw, 28px);
+    font-family:"Proxima Nova";
+    font-weight: 600;
+    color: #91A7A4;
+}
+.leftBlock-text-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.WRLEFT{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+/* При ширине <1600px переносим левый заголовок в колонку и выравниваем по началу */
+@media (max-width: 1599px){
+  .leftBlock-text-line{ flex-direction: column; align-items: flex-start; }
+  .WRLEFT{ margin-left: 0; margin-top: 8px; }
+}
+
+.credit-card{
+    font-family: "Oswald";
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 500px;
+    justify-content: space-around;
+    color: #fff;
+    font-weight: 500;
+    padding-left: 50px;
+    line-height: 250%;
+    border-radius: 27px;
+    border: 1px solid #2f90ff;
+    background: linear-gradient(105.86deg,
+      rgba(25, 25, 25, 0.08) 2.37%,
+      rgba(15, 226, 255, 0.33) 46.78%,
+      rgba(3, 81, 153, 0.07) 90.65%
+    );
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    position: relative;
+    z-index: 2; /* карточка выше задней монеты */
+}
+
+.rightBlock{
+    position: relative;
+    width: 640px;
+    height: 520px;
+    max-width: 100%;
+    overflow: visible;
+}
+
+.home-img{
+    position: absolute;
+    bottom: 36px;
+    right: clamp(0px, 2vw, 20px);
+    width: clamp(280px, 42vw, 480px);
+    height: auto;
+    z-index: 3;
+}
+
+.coin{
+    position: absolute;
+    width: clamp(64px, 12vw, 180px);
+    height: auto;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
+    will-change: transform;
+    transform: translateZ(0);
+    --coin-float: -20px;
+    animation-name: coin-float;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 3s;
+}
+.coin--back{
+    top: -40px;
+    right: 10px;
+    z-index: 1; /* под карточкой */
+    animation-duration: 3s;
+    animation-delay: 0.6s;
+}
+.coin--front{
+    bottom: 40px;
+    left: 60px;
+    z-index: 4;
+    animation-duration: 5.8s;
+    animation-delay: 0.2s;
+}
+
+@keyframes coin-float {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(0, var(--coin-float, -20px), 0); }
+}
+
+.credit-title{
+    display: flex;
+    flex-direction: column;
+}
+
+.credit-title-text{
+    font-size: 46px;
+}
+.credit-title-text-s{
+    font-size: 33px;
+}
+
+.credit-subt{
+    font-size: 26px;
+}
+
+/* CTA у левого края */
+.cta{
+    margin-left: 24px; /* прижимаем к левому краю страницы */
+    margin-top: clamp(20px, 3vw, 48px);
+}
+.cta-text{
+    font-family: "Proxima Nova";
+    font-weight: 600;
+    font-size: clamp(16px, 1.4vw, 20px);
+    line-height: 125%;
+    color: #91A7A4;
+    margin-bottom: 16px;
+}
+.cta-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 28px 18px 28px;
+    background: #2f90ff;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    box-shadow: 0 6px 24px rgba(47, 144, 255, 0.35);
+    font-family: "Proxima Nova";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.cta-btn:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 10px 28px rgba(47, 144, 255, 0.45);
+    background: #3b97ff;
+}
+.cta-arrow{
+    font-size: 22px;
+}
+
+/* Ряд преимуществ */
+.benefits{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 120px;
+    margin: 80px 24px 0 24px;
+    color: #cfd8d6;
+}
+.benefit-item{ font-size: clamp(14px, 1.2vw, 16px); }
+
+@media (max-width: 1439px){
+  .benefits{ grid-template-columns: repeat(3, 1fr); gap: 64px; }
+}
+.benefit-item{
+    font-family: "Proxima Nova";
+    font-weight: 600; /* Semibold */
+    font-size: 16px;
+    line-height: 140%;
+    opacity: 0.85;
+}
+
+@media (max-width: 1199px){
+  .cta{ margin-left: 16px; }
+  .benefits{ grid-template-columns: repeat(2, 1fr); gap: 48px; }
+}
+@media (max-width: 767px){
+  .cta{ margin-left: 12px; }
+  .cta-text{ font-size: 16px; }
+  .cta-btn{ width: 100%; justify-content: center; }
+  .benefits{ grid-template-columns: 1fr; gap: 24px; margin-left: 12px; margin-right: 12px; }
+}
+
+/* ===== Loans section ===== */
+.loans { margin-top: 80px; }
+.loans-title{
+  font-family: "Druk Cyrillic";
+  font-weight: 900; /* Heavy */
+  font-size: 100px;
+  line-height: 102%;
+  text-transform: uppercase;
+  color: #f4f7f6; /* чуть мягче чистого белого как в макете */
+  margin-bottom: 28px;
+}
+
+.loan-cards{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 830px));
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: start;
+  margin-top: 12px;
+}
+
+.loan-card{
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  min-height: clamp(560px, 58vw, 1060px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  top: 24px; /* старт для анимации появления */
+  opacity: 0; /* стартовое состояние */
+  max-width: 830px;
+}
+.loan-card.dark::before{
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.42) 60%, rgba(0,0,0,0.25) 100%);
+  z-index: 1;
+}
+.loan-card__bg{
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  top: 0; /* будем анимировать через jQuery */
+}
+.loan-card__content{
+  position: relative;
+  z-index: 2;
+  padding: clamp(18px, 2.2vw, 32px); /* адаптивные отступы */
+  color: #fff;
+}
+.loan-card__title{
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.28);
+}
+.loan-card__subtitle{
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 18px;
+}
+.loan-card__btn{
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.95);
+  color: #000000;
+  border: 1px solid rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+}
+.loan-card__btn:hover{
+    background: #000000;
+    color:  rgba(255,255,255,0.95) ;
+    border: 1px solid rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+}
+
+/* Точные цвета и стили слева (светлая карточка) */
+.loan-card--left .loan-card__title{ color: #163e37; text-shadow: none; }
+.loan-card--left .loan-card__subtitle{ color: #2f5851; }
+.loan-card--left .loan-card__btn{
+  background: rgba(255,255,255,0.96);
+  color: #163e37;
+  border: 1px solid rgba(22,62,55,0.25);
+}
+.loan-card--left .loan-card__btn:hover{
+    background:  #163e37;
+    color: rgba(255,255,255,0.96);
+    border: 1px solid rgba(22,62,55,0.25);
+  box-shadow: 0 8px 22px rgba(22,62,55,0.18);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+}
+
+/* Позиционирование для точного выравнивания */
+.loans .wrapper{ max-width: 1750px; }
+
+/* Смещение правой карточки вниз на 50px */
+.loan-card--right{ margin-top: 200px; }
+
+/* jQuery animate управляет opacity и top */
+
+@media (max-width: 1199px){
+  .loans-title{ font-size: 72px; }
+  .loan-cards{ grid-template-columns: 1fr; }
+  .loan-card{ min-height: 720px; }
+}
+@media (max-width: 767px){
+  .loans-title{ font-size: 48px; }
+  .loan-card{ min-height: 480px; }
+}
+
+/* ===== Estate section ===== */
+.estate{ margin: 80px 0 120px; }
+/* ===== Special section ===== */
+.special{ margin: clamp(24px, 3vw, 40px) 0 clamp(48px, 5vw, 80px); }
+.special-grid{ display:flex; align-items:flex-start; width:100%; gap: clamp(12px, 2vw, 20px); }
+.special-col{ display:flex; flex-direction:column; flex:1 1 50%; min-width:0; }
+.special-col--left{ margin-top: clamp(40px, 6vw, 100px); }
+.special-card{
+  position: relative;
+  border-radius: 24px;
+  overflow:hidden;
+  background: var(--bg, #215a6b);
+  margin: 10px;
+  width: 100%;
+  min-height: clamp(200px, 22vw, 700px);
+}
+.special-card__label{
+  font-family:"Proxima Nova"; font-weight:700; font-size: clamp(20px, 2.2vw, 34px); text-transform:uppercase; color:#fff;
+  margin-left: clamp(20px, 3vw, 50px);
+  margin-top: clamp(20px, 3vw, 50px);
+  position: relative; z-index: 2;
+}
+.special-card__media{ position:absolute; inset:0; display:flex; align-items:flex-end; justify-content:center; pointer-events:none; }
+.b{justify-content: flex-end!important; top: 80px;}
+.special-card__media img{ max-width:100%; max-height:100%; object-fit:contain; }
+.special-card:hover{ transform: translateY(-2px); box-shadow:0 16px 36px rgba(0,0,0,.35); transition:transform .2s ease, box-shadow .2s ease; }
+
+/* Стек из двух изображений для oficial */
+.special-card__media--stack{ position:absolute; inset:0; overflow:hidden; }
+.special-card__img--bottom,
+.special-card__img--top{
+  position:absolute; inset:0; width:100%; height:100%; max-width:none; max-height:none;
+  object-fit:contain; object-position: center; pointer-events:none;
+}
+.special-card__img--bottom{ transform: translateY(40%); }
+.special-card__img--top{ transform: translateY(40%) translateX(6%); transition: transform .25s ease; }
+.special-card--oficial:hover .special-card__img--top{ transform: translateY(44%); }
+
+@media (max-width: 1199px){ .special-col--left{ margin-top: 40px; } }
+@media (max-width: 767px){
+  .special-grid{ flex-direction:column; }
+  .special-col--left{ margin-top: 0; }
+  .special-card{ min-height: 320px; min-width: 80vw; }
+}
+
+/* Снижаем высоту карт на адаптивах, перекрывая жесткие высоты */
+@media (max-width: 1439px){
+  .special-card{ height: auto !important; min-height: clamp(240px, 28vw, 520px); }
+}
+@media (max-width: 1199px){
+  .special-card{ height: auto !important; min-height: clamp(220px, 34vw, 480px); }
+}
+.estate-title{
+  font-family: "Druk Cyrillic";
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 105%;
+  text-transform: uppercase;
+  color: #f4f7f6;
+  margin-bottom: 24px;
+}
+.estate-grid{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.estate-col{ display: flex; flex-direction: column; min-width: 0; }
+.estate-col--right{ margin-top: 300px; }
+.estate-card{
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--bg, #215a6b);
+  padding: 14px;
+  transition: transform .2s ease, box-shadow .2s ease;
+  max-width: 800px;
+  width: 100%;
+  height: 780px;
+  margin: 10px;
+}
+.estate-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.35);
+}
+.estate-card__label{
+margin-left: 50px;
+margin-top: 50px;
+  z-index: 2;
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.estate-card__img{
+    margin-top: 15%;
+}
+
+/* ===== Riski section ===== */
+.riski{ margin: clamp(48px, 6vw, 120px) 0; }
+.riski-title{
+  font-family: "Druk Cyrillic";
+  font-weight: 900;
+  font-size: clamp(40px, 6vw, 100px);
+  line-height: 102%;
+  text-transform: uppercase;
+  color: #f4f7f6;
+  margin-bottom: 24px;
+}
+.riski-grid{ display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items:flex-start; }
+.riski-card{ min-width:0; display:flex; flex-direction:column; gap:16px; }
+.riski-media{ width:100%; aspect-ratio: 16 / 9; background: rgba(255,255,255,0.06); border-radius: 32px; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+.riski-media img{ width:100%; height:100%; object-fit: cover; }
+.riski-card__title{
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  font-size: clamp(20px, 2.4vw, 36px);
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+.riski-card__subtitle{
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 125%;
+  color: #cfd8d6;
+  margin: 0;
+}
+
+@media (max-width: 1199px){ .riski-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 991px){ .riski-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; } }
+@media (max-width: 767px){ .riski-grid{ grid-template-columns: 1fr; gap:16px; } }
+
+/* ===== FAQ section ===== */
+.faq{ padding: 60px 0 40px; color:#fff; background: radial-gradient(120% 120% at 70% 30%, #0c1b1f 0%, #071016 60%, #060b0f 100%); }
+.faq .wrapper{ max-width: 1750px; }
+.faq-title{
+  font-family:"Druk Cyrillic";
+  font-weight:900; /* Heavy */
+  font-size: clamp(40px, 6vw, 100px);
+  line-height:102%;
+  text-transform:uppercase;
+  letter-spacing:0;
+  margin:0 0 24px;
+}
+.faq-list{ list-style:none; padding:0; margin: 20px 0 0; border-top: 1px solid rgba(255,255,255,.22); }
+.faq-item{ border-bottom: 1px solid rgba(255,255,255,.22); }
+.faq-q{ width:100%; padding: clamp(14px, 2.2vw, 22px) 0; background:none; border:0; color:#eaf0f3; display:grid; grid-template-columns:64px 1fr 24px; gap:16px; align-items:center; cursor:pointer; justify-items: start; }
+.faq-num{ font-family:"Proxima Nova"; font-weight:700; font-size:36px; line-height:120%; text-transform:uppercase; color:#9fb3bf; }
+.faq-text{ font-family:"Proxima Nova"; font-weight:700; font-size:36px; line-height:120%; text-transform:uppercase; letter-spacing:0; }
+.faq-arrow{ width:24px; height:24px; transform: rotate(0); transition: transform .25s ease; filter: invert(1); }
+.faq-a{ padding: 0 0 22px 64px; font-family:"Proxima Nova"; font-weight:600; font-size:20px; line-height:125%; color:#cfd8d6; max-width: 1200px; }
+.faq-item.is-open .faq-arrow{ transform: rotate(90deg); }
+
+/* Состояния и анимация раскрытия по высоте для пиксель‑перфекта */
+.faq-a{ overflow:hidden; }
+.faq-a[hidden]{ display:block; max-height:0; padding-bottom:0; }
+.faq-a{ transition: max-height .28s ease, padding .28s ease; max-height:0; }
+.faq-item.is-open .faq-a{ max-height: 240px; }
+
+.faq-note{ display:flex; align-items:center; gap:12px; margin-top: 18px; color:#9fb3bf; font-family:"Proxima Nova"; font-weight:600; font-size:14px; }
+
+@media (max-width: 1199px){
+  .faq-title{ font-size:72px; }
+  .faq-text, .faq-num{ font-size:30px; }
+  .questions__left{ width: 100%; }
+}
+@media (max-width: 767px){
+  .faq-title{ font-size:40px; }
+  .faq-q{ grid-template-columns:48px 1fr 24px; }
+  .faq-a{ padding-left:48px; }
+  .faq-q{ width:100%; }
+  .faq-text, .faq-num{ font-size:24px; }
+  .faq-arrow{ width:20px; height:20px; }
+}
+
+/* ===== Questions (CTA + правый probability__right) ===== */
+.questions{ padding: 40px 0 80px; background: radial-gradient(120% 120% at 70% 30%, #0c1b1f 0%, #071016 60%, #060b0f 100%); color:#fff; }
+.questions__wrap{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+.questions__left{ display:flex; flex-direction:column; gap: 18px; width: 70%; justify-items: start; }
+.questions-title{ font-family:"Druk Cyrillic"; font-weight:900; font-size:100px; line-height:102%; text-transform:uppercase; margin:0; }
+.questions-list{ margin: 6px 0 10px 0; padding-left: 20px; display:flex; flex-direction:column; gap:10px; }
+.questions-list li{ list-style: disc; font-family:"Proxima Nova"; font-weight:600; font-size:28px; line-height:150%; color:#d6e2e9; }
+.questions-btn{ width: max-content; }
+
+@media (max-width: 1199px){
+  .questions__wrap{ grid-template-columns: 1fr; }
+  .questions-title{ font-size:72px; }
+}
+@media (max-width: 767px){
+  .questions-title{ font-size:40px; }
+  .questions-btn{ width: 100%; justify-content: center; }
+}
+
+/* ===== Footer ===== */
+
+.site-footer{ background:#191919; color:#fff; padding: 36px 0 28px; border-top: 1px solid rgba(255,255,255,.08); }
+.footer-top{ display:grid; grid-template-columns: 300px 1fr auto; align-items:start; gap: 24px; }
+.footer-logo img{ width:300px; height:auto; display:block; }
+.footer-logo-col{ display:flex; flex-direction:column; gap: 16px; }
+
+/* центр — 2 колонки ссылок */
+.footer-cols{ display: flex; gap: 100px; margin: 0 auto;}
+.footer-col{ display:flex; flex-direction:column; gap: 14px; }
+.footer-link{ width: max-content; font-family:"Proxima Nova"; font-weight:600; font-size:17px; line-height:100%; color:#5f5f5f; text-decoration:none; transition: all .2s linear; }
+.footer-link:hover{ border-bottom: 1px solid #2f90ff; color:#2f90ff; }
+
+/* справа — только телефон */
+.footer-contacts{ display:flex; align-items:flex-start; justify-content:flex-end; gap: 20px; }
+.footer-phone{ font-family:"Druk Cyrillic"; font-weight:900; font-size:64px; line-height:102%; text-transform:uppercase; color:#fff; text-decoration:none; white-space:nowrap; }
+.footer-ics .probability-ic{ width:57px; height:57px; background:#000; color:#000; }
+.footer-ics .probability-ic:hover{ transform: translateY(-2px) scale(1.03); filter: invert(1); }
+
+.footer-bottom{ margin-top: 18px; }
+.footer-note{ margin:50px 0 0; font-family:"Proxima Nova"; font-weight:600; font-size:16px; line-height:125%; color:#292929; }
+
+@media (max-width: 1199px){
+  .footer-top{ grid-template-columns: 1fr; gap:16px; }
+  .footer-cols{ grid-template-columns: 1fr; }
+  .footer-phone{ font-size:40px; }
+}
+@media (max-width: 767px){
+  .footer-phone{ font-size:32px; }
+  .footer-nav{ gap:14px; }
+}
+
+/* ===== Probability form section ===== */
+.probability{ position: relative; padding: 80px 0; background: #0b1116;max-width: 1920px; margin: 0 auto; }
+.probability__wrap{ display:flex; align-items:flex-start; gap: 40px; }
+.probability__left{ flex: 1 1 55%; }
+.probability__right{ flex: 1 1 45%; display:flex; flex-direction:column; align-items:center; gap: 16px; }
+.probability-form{ margin-top: 24px; }
+.probability-row{ border-bottom: 2px solid rgba(255,255,255,0.12); padding: 18px 0; }
+.probability-row input{ width:100%; background: transparent; border:0; outline:0; color:#fff; font-family:"Proxima Nova"; font-weight:600; font-size:20px; }
+.probability-row input::placeholder{ color: rgba(255,255,255,0.35); }
+.probability-btn{ margin-top: 24px; }
+.probability-note{ margin-top: 10px; font-family:"Proxima Nova"; font-size:12px; color: rgba(255,255,255,0.45); }
+
+.probability-figure{ width:520px; height:520px;  display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.probability-img{ width:100%; height:100%; object-fit: contain; }
+.probability-help{ font-family:"Proxima Nova"; font-size:14px; color:#9fb3b2; text-align:center; max-width: 520px; }
+.probability-contacts{ display:flex; gap: 16px; }
+.probability-ic{ width: 57px; height: 57px; border-radius: 50%; background: rgb(0, 0, 0); color:#000000; display:flex; align-items:center; justify-content:center; transition: transform .2s ease, background .2s ease; }
+.probability-ic:hover{ transform: translateY(-2px) scale(1.03); color: rgb(255, 255, 255); filter: invert(1); }
+.probability-ic.tg{ color:#2aa2e2; }
+.probability-ic.wa{ color:#25D366; }
+
+@media (max-width: 1199px){
+  .probability__wrap{ flex-direction:column; align-items:stretch; }
+  .probability-figure{ margin: 0 auto; }
+}
+
+/* ===== Steps section ===== */
+.steps{ padding: 80px 0 40px; background: #fff; color:#0b1116; }
+/* Цветовой фильтр иконок (можно подстроить под макет) */
+:root{ --steps-accent-filter: drop-shadow(0 4px 12px rgba(47,144,255,.25)); }
+.steps-title{
+  font-family: "Druk Cyrillic";
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 102%;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.steps-list{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  list-style:none;
+  padding:0; margin: 24px 0 0;
+  justify-content: center;
+}
+.step{ display:flex; flex-direction:column; gap: 8px; border-radius: 16px; transition: transform .2s ease, box-shadow .2s ease; align-items: stretch; max-width: 370px;}
+.step:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.06); }
+.step-badge{ position: relative; }
+.step-num{     color: #2f90ff; display:block; font-family:"Druk Cyrillic"; font-weight:900; font-size: clamp(72px, 9vw, 180.23px); line-height:102%; text-transform:uppercase; }
+/* Иконки лежат поверх текста и центрируются */
+.step-icon{ position:absolute; left:48%; top:65%; transform: translate(-50%, -50%);height: auto; object-fit: contain; pointer-events: none; z-index: 2; }
+.step-title{ font-family:"Proxima Nova"; font-weight:700; font-size:32px; line-height:120%; text-transform:uppercase; margin:0; }
+.step-desc{ font-family:"Proxima Nova"; font-weight:600; font-size:20px; line-height:125%; color:#4b5258; margin:0; }
+.step--4 .step-icon{ transform: translate(-50%, -40%)!important;}
+.steps-paper{ display:flex; justify-content:center; margin-top: 24px; }
+.steps-paper img{ max-width: 100%; height:auto; object-fit: contain; }
+
+@media (max-width: 1199px){
+  .steps-title{ font-size: 72px; }
+  .steps-list{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px){
+  .steps-title{ font-size: 40px; }
+  .steps-list{ grid-template-columns: 1fr; }
+  .step-icon{ max-width: 120px; width: 45%; }
+}
+
+/* ===== Safety section ===== */
+.safety{ padding-top: 80px; background:#fff; color:#0b1116; }
+.safety__wrap{ display:grid; grid-template-columns: 1fr 1fr; align-items:center; gap: 40px; }
+.safety__left, .safety__right{ min-width: 0; }
+.safety-title{ font-family:"Druk Cyrillic"; font-weight:900; font-size:100px; line-height:102%; text-transform:uppercase; margin:0 0 20px; }
+.safety-list{ margin: 0; padding: 0 0 0 20px; display:flex; flex-direction:column; gap: 14px; }
+.safety-list li{ font-family:"Proxima Nova"; font-weight:600; font-size:20px; line-height:150%; color:#2a2f36; }
+.safety__right{ margin:0; width: 100%; overflow:hidden; }
+.safety__right img{ max-width: 100%; width: 100%; height: auto; display:block; object-fit: contain; }
+
+.safety__left{ max-width: 500px; }
+@media (max-width: 1199px){
+  .safety-title{ font-size: 72px; }
+}
+@media (max-width: 767px){
+  .safety__wrap{ grid-template-columns: 1fr; }
+  .safety-title{ font-size: 40px; }
+  .safety__right{ order: 2; }
+  .safety__left{ order: 1; }
+}
+
+/* ===== Valuation + Calculator ===== */
+.valuation{background:#fff; color:#0b1116; }
+.valuation-title{ font-family:"Druk Cyrillic"; font-weight:900; font-size:100px; line-height:102%; text-transform:uppercase; margin:0 0 20px; }
+.valuation__grid{ display:grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items:center; }
+.valuation-img{ width:100%; height:auto; object-fit:contain; }
+.valuation-text p{ font-family:"Proxima Nova"; font-weight:600; font-size:18px; line-height:150%; color:#2a2f36; margin:0 0 12px; }
+.valuation-sep{ border:0; height:1px; background:rgba(0,0,0,.1); margin:28px 0; }
+.valuation-subtitle{ font-family:"Proxima Nova"; font-weight:700; font-size:32px; text-transform:uppercase; margin:0 0 16px; }
+.valuation__head{ max-width: 1000px; }
+.valuation__calc{ display:block; }
+.calc-row{ margin: 20px 0; }
+.calc-label{ display:block; font-family:"Proxima Nova"; font-weight:600; font-size:28px; color:#000; margin-bottom:8px; }
+.calc-row input[type=range]{ width:100%; appearance:none; height:2px; background:#dcdfe3; outline:none; border-radius:2px; }
+.calc-row input[type=range]::-webkit-slider-thumb{ appearance:none; width:16px; height:16px; background:#0b1116; border-radius:50%; cursor:pointer; border:2px solid #0b1116; }
+.calc-value{ font-family:"Proxima Nova"; font-weight:600; font-size:26px; margin-top:8px; color:#000; }
+
+.valuation-form{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items:center; margin-top: 16px; }
+.valuation-form input[type=text],
+.valuation-form input[type=tel]{ height:44px; border:1px solid rgba(0,0,0,.2); border-radius:8px; padding:0 14px; font-family:"Proxima Nova"; font-size:19px; }
+.file-uploader{ border:1px dashed rgba(0,0,0,.25); border-radius:8px; padding:10px 14px; min-height:44px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.file-uploader input{ display:none; }
+.file-hint{ font-family:"Proxima Nova"; font-weight:600; font-size:17px; color:#6b7177; line-height:140%; }
+/* Выбранные файлы */
+.file-selected{ font-family:"Proxima Nova"; font-weight:600; font-size:17px; color:#2a2f36; }
+.cta-invert{ justify-self:end; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+.cta-invert:hover{ background:#fff; color:#2f90ff; border:1px solid #2f90ff; }
+
+@media (max-width: 1199px){
+  .valuation-title{ font-size:72px; }
+  .valuation__grid{ grid-template-columns: 1fr; }
+  .valuation-form{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 767px){
+  .valuation-title{ font-size:40px; }
+  .valuation-form{ grid-template-columns: 1fr; }
+  .cta-invert{ justify-self:stretch; }
+}
+
+/* ===== Messengers CTA ===== */
+.mcta{ padding: 32px 0 80px; background:#fff; }
+.mcta__box{ background:#2f90ff; border-radius:28px; padding:32px; color:#fff; display:flex;align-items:center; gap:32px; max-width: 1450px; margin: 0 auto;}
+.mcta__box, .features, .reviews, .approve{ overflow-x: clip; }
+.mcta__text{ max-width: 780px; }
+.mcta__title{ font-family:"Proxima Nova"; font-weight:700; font-size:36px; line-height:120%; text-transform:uppercase; margin:0 0 12px; }
+.mcta__subtitle{ font-family:"Proxima Nova"; font-weight:600; font-size:28px; line-height:150%; margin:0; }
+.mcta__actions{ display:flex; gap:16px; }
+.pill-btn{ display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:14px 28px; border:1px solid rgba(255,255,255,.85); border-radius:999px; color:#fff; font-family:"Proxima Nova"; font-weight:600; font-size:28px; line-height:150%; text-decoration:none; transition: background .2s ease, color .2s ease; min-height: 52px; }
+.pill-btn:hover{ background:#fff; color:#2f90ff; }
+.pill-arrow{ margin-left:6px; }
+
+@media (max-width: 991px){
+  .mcta__box{ flex-direction:column; align-items:flex-start; }
+  .mcta__actions{
+    flex-direction: column;
+    width: 100%;
+  }
+  
+}
+/* Адаптив типографики mcta */
+@media (max-width: 1199px){
+  .mcta__title{ font-size: 32px; }
+  .mcta__subtitle{ font-size: 22px; }
+}
+@media (max-width: 767px){
+  .mcta__title{ font-size: 24px; }
+  .mcta__subtitle{ font-size: 18px; }
+  .mcta__text{ max-width: none; }
+}
+@media (max-width: 420px){
+  .mcta__title{ font-size: 20px; }
+  .mcta__subtitle{ font-size: 16px; }
+}
+/* ===== Reviews ===== */
+.reviews{ padding: 60px 0 100px; background:#fff; color:#0b1116; }
+.reviews-notice{ background:#4b4f53; color:#fff; border-radius:20px; padding: clamp(12px, 2vw, 24px); text-align:center; text-transform:uppercase; font-family:"Proxima Nova"; font-weight:700; font-size: clamp(16px, 3.8vw, 36px); line-height:120%; }
+.reviews-title{ margin:32px 0 24px; font-family:"Druk Cyrillic"; font-weight:900; font-size: clamp(40px, 6vw, 100px); line-height:102%; text-transform:uppercase; width: 40%; }
+.reviews-slider{ margin-top:16px; }
+/* Управляем отступами и высотой карточек внутри slick */
+.reviews-slider .slick-list{ overflow: hidden; }
+.reviews-slider .slick-slide{ margin: 0 14px; }
+.review-item{ width:550px !important; min-height:400px !important; background:#2f2f2f; border-radius:20px; padding:24px; color:#fff; display:flex !important; flex-direction:column; gap:16px; }
+.reviews-arrows{ display:flex; justify-content:flex-start; gap:40px; margin-top:16px; }
+.reviews-arrows .slick-prev,
+.reviews-arrows .slick-next{ display:none !important; }
+.reviews-arrow{ cursor:pointer; }
+.reviews-arrow.reviews-arrow--prev{ content:""; transform: scale(-1, -1); }
+.review-head{ font-family:"Proxima Nova"; font-weight:700; font-size:28px; line-height:120%; text-transform:uppercase; }
+.review-body{ font-family:"Proxima Nova"; font-weight:600; font-size:20px; line-height:150%; color:#e8e8e8; }
+.reviews-rating{ margin-top: 28px; display:flex; flex-direction:column; gap:8px; width: 40%;}
+.reviews-note{ font-family:"Proxima Nova"; font-weight:700; font-size:36px; line-height:120%; text-transform:uppercase; margin:0; }
+.reviews-score{ display:flex; align-items:center; gap:16px; flex-direction: column; width: max-content;}
+.reviews-score-number{ font-family:"Druk Cyrillic"; font-weight:900; font-size:330px; line-height:1; }
+.reviews-stars{ display:block; line-height:0; }
+
+
+@media (max-width: 1199px){
+  .reviews-title{ font-size:72px; }
+  .review-item{ width:480px !important; min-height:360px !important; }
+}
+@media (max-width: 991px){
+  .reviews-title{ width: 100%; }
+  .reviews-rating{ width: 100%; }
+  .reviews-arrows{ justify-content: center; }
+}
+@media (max-width: 767px){
+  .reviews-title{ font-size:40px; }
+  .reviews-slider .slick-slide{ margin: 0 8px; }
+  .review-item{ width: 80vw !important; min-height: auto !important; padding:16px; }
+  .review-head{ font-size:22px; }
+  .review-body{ font-size:16px; }
+}
+@media (max-width: 560px){
+  .review-item{ width: 80vw !important; }
+}
+@media (max-width: 420px){
+  .review-item{ width: 80vw !important; }
+  .reviews-arrows{ gap:20px; }
+}
+
+/* ===== Approve conditions ===== */
+.approve{ padding: clamp(40px, 5vw, 60px) 0 clamp(80px, 7vw, 100px); background:#fff; color:#0b1116; }
+.approve__container{ display:flex; flex-direction:column; gap:32px; }
+.approve__row{ display:flex; gap:20px; align-items:flex-start; }
+.approve__left{ flex: 0 0 42%; min-width: 0; }
+.approve__right{ flex: 1 1 auto; display:flex; align-items:flex-start; min-width: 0; }
+.approve-title{ font-family:"Druk Cyrillic"; font-weight:900; font-size: clamp(40px, 6vw, 100px); line-height:102%; text-transform:uppercase; margin:0 0 20px; }
+.approve-list{ list-style: disc; padding-left: 20px; margin: 0 0 24px; }
+.approve-list li{ font-family:"Proxima Nova"; font-weight:600; font-size: clamp(18px, 1.8vw, 28px); line-height:150%; margin-bottom:12px; }
+
+.approve-cta{ display:inline-flex; align-items:center; gap:12px; padding:18px 30px; border:2px solid #0b1116; border-radius:999px; color:#0b1116; text-decoration:none; font-family:"Proxima Nova"; font-weight:600; font-size:18px; width:max-content; transition: all .2s linear; }
+.approve-cta:hover{ background-color: #0b1116; color: #ffffff;}
+.approve-cta:hover img{ filter: invert(1); }
+
+.questions .approve-cta{ background-color: #ffffff; color: #0b1116;}
+.questions .approve-cta:hover{ background-color: #0b1116; color: #ffffff;}
+.questions .approve-cta:hover img{ filter: invert(1); }
+.approve-rows{ position: relative; z-index: 0; width:100%; background:#F1CF9B; overflow:hidden; }
+.approve-row{ display:flex; align-items:center; gap:18px; padding:14px 28px; border-bottom:1px solid rgba(0,0,0,.18); }
+.approve-row:last-child{ border-bottom:0; }
+.approve-row .dot{ width:12px; height:12px; background:#0b1116; border-radius:50%; display:inline-block; flex: 0 0 12px; }
+.approve-row__text{ font-family:"Proxima Nova"; font-weight:700; font-size: clamp(22px, 2.4vw, 36px); line-height:120%; text-transform:uppercase; letter-spacing:0; }
+
+@media (max-width: 1199px){
+  .approve-title{ font-size:72px; }
+  .approve__row{ gap:16px; }
+}
+@media (max-width: 991px){
+  .approve__row{ flex-direction: column; gap:20px; }
+  .approve__left, .approve__right{ flex: 1 1 auto; width: 100%; }
+}
+@media (max-width: 767px){
+  .approve-title{ font-size:40px; }
+  .approve-row{ padding:12px 16px; gap:12px; }
+  .approve-row .dot{ width:8px; height:8px; }
+  .approve-cta{ justify-content:center; }
+}
+
+@media (max-width: 1199px){
+  .estate-title{ font-size: 56px; }
+  /* при флекс-колонках авто-рядов нет, оставляем адаптивное поведение */
+}
+@media (max-width: 767px){
+  .estate-title{ font-size: 36px; }
+  .estate-grid{ grid-template-columns: 1fr; }
+  .estate-col--right{ margin-top: 0; }
+  .estate-card{ height: 360px; }
+}
+
+/* Estate slider стили при js-слайдере */
+.estate-slider .estate-card{ width: 560px; max-width: 86vw; height: auto; margin: 0 14px; }
+.estate-slider .estate-card .estate-card__img{ margin-top: 8%; }
+.estate-slider, .estate-slider .slick-list{ overflow: hidden; }
+
+/* ===== Features (Понятно и прозрачно) ===== */
+.features{ padding: 60px 0 100px; background:#fff; color:#0b1116; }
+.features-title{ font-family:"Druk Cyrillic"; font-weight:900; font-size: clamp(40px, 6vw, 100px); line-height:1.05; text-transform:uppercase; margin:0 0 24px; }
+
+/* Гибкая сетка без множества медиазапросов */
+.features-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 500px)); gap: 28px; list-style:none; padding:0; margin:0; justify-content:center; }
+.feature{ display:flex; flex-direction:column; align-items:center; text-align:center; width: min(100%, 500px); border-radius:20px; overflow:hidden; background:#fff; contain: content; }
+.feature-img{ width:100%; height: min(52vw, 370px); object-fit:cover; border-radius:20px; transition: transform .35s ease, box-shadow .35s ease, filter .35s ease; will-change: transform, filter; }
+/* Анимируем только изображение: лёгкое приближение и свечения акцентным цветом */
+.feature:hover .feature-img{ transform: scale(1.1);  filter: brightness(1.03) saturate(1.05); }
+.feature-text{ margin-top:12px; font-family:"Proxima Nova"; font-weight:600; font-size:28px; line-height:140%; color:#2a2f36; }
+
+/* мягкие пороги при необходимости */
+@media (max-width: 767px){
+  .features-grid{ grid-template-columns: 1fr; }
+  .feature{ width:100%; }
+  .feature-img{ height:260px; }
+  .feature-text{ font-size:20px; }
+}
+/* Features slider */
+.features-slider .feature{ width: 500px; max-width: 86vw; margin: 0 14px; }
+.features-slider .feature-img{ height: min(52vw, 320px); }
+.features-slider, .features-slider .slick-list{ overflow: hidden; }
+.features{ overflow-x: clip; }
+
+@media (max-width: 420px){
+  .features-slider .feature{ max-width: 90vw; }
+  .features-slider .feature-img{ height: 56vw; }
+  .feature-text{ font-size: 18px; }
+}
+@media (max-width: 1199px){ .features-title{ font-size:72px; } }
+@media (max-width: 767px){ .features-title{ font-size:40px; } }
+/* ===== Apply form section ===== */
+.apply{ margin: 100px 0 140px; }
+.apply-title{
+  font-family: "Druk Cyrillic";
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 102%;
+  text-transform: uppercase;
+  color: #f4f7f6;
+  margin-bottom: 24px;
+}
+.apply-wizard{ max-width: 1600px; }
+.apply-step__progress{ font-family: "Proxima Nova"; color: #8aa5a0; margin: 8px 0 16px; display: flex; align-items: baseline; gap: 10px; }
+.apply-step__num,.apply-step__total{ font-family: "Druk Cyrillic"; font-weight: 900; font-size: 24px; color: #8aa5a0; }
+.apply-step__label{ font-family: "Proxima Nova"; font-weight: 400; font-size: 36px; line-height: 120%; color: #e6f1ee; }
+.apply-fieldline{ position: relative; display:flex; align-items:flex-start; gap:8px; padding: 6px 0 16px; border-bottom: 2px solid rgba(255,255,255,0.15); }
+.apply-big-input{ flex:0 1 auto; min-width:10ch; max-width: 900px; background: transparent; border: 0; outline: 0; color: #fff; font-family: "Druk Cyrillic"; font-weight: 900; font-size: 56px; line-height: 130%; letter-spacing: 0; }
+.apply-big-unit{ position: relative; top: 8px; font-family: "Druk Cyrillic"; font-weight: 900; font-size: 40px; line-height: 130%; color: #fff; }
+.apply-hint{ display:block; margin-top: 8px; font-family: "Proxima Nova"; font-weight: 400; font-size: 14px; color: rgba(255,255,255,0.6); }
+.apply-actions{ margin-top: 24px; }
+.apply-next[disabled]{ opacity: .5; pointer-events: none; }
+
+@media (max-width: 1199px){ .apply-title{ font-size: 72px; } }
+@media (max-width: 767px){ .apply-title{ font-size: 40px; } .apply-field{ min-width: 260px; } }
+
+/* ===== Global adaptive tweaks ===== */
+@media (max-width: 1440px){
+  .leftBlock-text{ font-size: 120px; }
+  .rightBlock{ width: 560px; height: 480px; }
+  .home-img{ width: 420px; }
+}
+
+@media (max-width: 1199px){
+  .header-wrap{ flex-wrap: wrap; row-gap: 8px; }
+  .leftBlock-text{ font-size: clamp(56px, 7vw, 92px); }
+  .credit-card{ width: 440px; height: 320px; }
+  .rightBlock{ width: 520px; height: 460px; }
+  .home-img{ width: clamp(320px, 38vw, 400px); }
+  .coin{ --coin-float: -14px; }
+  .loan-card{ min-height: 780px; }
+  .estate-card{ height: 640px; }
+  .header-text{ display: none; }
+}
+
+@media (max-width: 991px){
+  .header-wrap{ margin-top: 14px; }
+  .zalog{ flex-direction: column; align-items: center; margin-top: 60px; }
+  .leftBlock-text{ font-size: clamp(48px, 8vw, 72px); }
+  .credit-card{ width: 420px; height: 300px; }
+  .rightBlock{ width: 520px; height: 420px; }
+  .home-img{ width: clamp(300px, 50vw, 360px); right: 0; }
+  .coin{ --coin-float: -12px; }
+  .loan-card{ min-height: 640px; }
+  .loan-card--right{ margin-top: 80px; }
+  .estate-col--right{ margin-top: 120px; }
+  .estate-card{ height: 540px; }
+  .reviews-title, .reviews-rating{ width: 100%; }
+}
+
+@media (max-width: 767px){
+  .header-wrap{ justify-content: space-between; }
+  .header-text{ display: none; }
+  .leftBlock-text{ font-size: clamp(34px, 9vw, 48px); }
+  .leftBlock-text-s{ font-size: 18px; }
+  .rightBlock{ width: 100%; height: 360px; }
+  .home-img{ width: clamp(260px, 70vw, 320px); }
+  .coin{ --coin-float: -10px; }
+  /* hero credit card fits on small screens */
+  .credit-card{ width: clamp(240px, 86vw, 340px); height: auto; min-height: 220px; padding-left: 22px; }
+  .cta{ margin-left: 0; padding: 0 4px; }
+  .benefits{ margin: 40px 0 0; gap: 18px; }
+  .loans-title, .estate-title, .riski-title, .steps-title, .valuation-title, .features-title, .apply-title, .reviews-title, .approve-title, .safety-title{ font-size: 40px; }
+  .loan-card{ min-height: 520px; border-radius: 20px; }
+  .loan-card__title{ font-size: 28px; }
+  .loan-card__subtitle{ font-size: 18px; }
+  .loan-card__btn{ font-size: 18px; }
+  .loan-card--right{ margin-top: 32px; }
+  .estate-card{ height: 420px; border-radius: 18px; }
+  .estate-card__label{ font-size: 28px; margin-left: 20px; margin-top: 20px; }
+  .probability-figure{ width:280px; height:280px; }
+  .probability-ic{ width: 52px; height: 52px; }
+  .steps-list{ grid-template-columns: 1fr; }
+  .reviews-notice{ font-size: 24px; }
+  .reviews-score-number{ font-size: 180px; }
+  .mcta__box{ border-radius: 20px; }
+  .footer-top{ grid-template-columns: 1fr; }
+  .footer-cols{ gap: 14px; margin: 0; flex-direction: column; }
+  .footer-contacts{ justify-content:flex-start; }
+  /* единые вертикальные отступы секций */
+  .loans{ margin-top: 48px; }
+  .estate{ margin: 48px 0 72px; }
+  .special{ margin: 28px 0 60px; }
+  .riski{ margin: 48px 0 72px; }
+  .probability{ padding: 60px 0; }
+  .steps{ padding: 60px 0 28px; }
+  .valuation{ padding-bottom: 40px; }
+  .features{ padding: 40px 0 72px; }
+  .reviews{ padding: 40px 0 80px; }
+  .approve{ padding: 40px 0 80px; }
+}
+
+@media (max-width: 420px){
+  .leftBlock-text{ font-size: 40px; }
+  .questions-title{ font-size: 32px; }
+  .questions-list li{ font-size: 18px; }
+  .footer-phone{ font-size: 28px; }
+  .menu-title{ font-size: 32px; }
+  .menu-link{ font-size: 20px; }
+  .modal-title{ font-size: 40px; }
+  .credit-title-text{ font-size: 28px; }
+  .credit-title-text-s{ font-size: 20px; }
+}
+
+@media (max-width: 360px){
+  .leftBlock-text{ font-size: 34px; }
+  .loan-card{ min-height: 460px; }
+  .probability-figure{ width:240px; height:240px; }
+  .footer-logo img{ width: 220px; }
+}

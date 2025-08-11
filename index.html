@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrapper header-wrap">
+            <a class="header-logo" href="#"><img src="images/icons/logo.svg" alt="logo"></a>
+            <div class="header-text"> <span> Набережные Челны,<br> ул. Машиностроительная, 22 стр. 5</span></div>
+            <div class="header-text"> <span>+7 (952) 046-08-08</span></div>
+        <div class="header-text"> <span>Моментальное одобрение</span></div>
+        <div class="header-text"> <span>Работаем ежедневно <br> с 9:00 до 18:00</span></div>
+        <button class="burger-menu" type="button" aria-label="Открыть меню" aria-controls="menu" aria-expanded="false">
+            <span class="burger-label">Меню</span>
+            <span class="burger-dots" aria-hidden="true">•••</span>
+        </button>
+        </div>
+    </header>
+
+    <!-- Модальное меню (бургер) -->
+    <div class="menu-overlay" id="menu" aria-hidden="true">
+      <div class="menu-backdrop" data-menu-close></div>
+      <aside class="menu-panel" role="dialog" aria-modal="true" aria-labelledby="menu-title">
+        <button class="menu-close" type="button" aria-label="Закрыть" data-menu-close>×</button>
+        <h2 class="menu-title" id="menu-title">Навигация</h2>
+        <nav class="menu-nav">
+          <a class="menu-link" href="#apply" data-menu-link>расчет суммы займа</a>
+          <a class="menu-link" href="#special" data-menu-link>спец предложения</a>
+          <a class="menu-link" href="#probability" data-menu-link>вероятность выдачи</a>
+          <a class="menu-link" href="#valuation-calc" data-menu-link>калькулятор займа</a>
+          <a class="menu-link" href="#reviews" data-menu-link>отзывы</a>
+          <a class="menu-link" href="#faq" data-menu-link>ответы на вопросы</a>
+        </nav>
+
+        <!-- Мобильный перенос информации из хедера -->
+        <div class="menu-extra" aria-label="Контакты"></div>
+      </aside>
+    </div>
+
+    <main>
+        <div class="wrapper">
+            <div class="zalog">
+                <div class="leftBlock">
+                    <span class="leftBlock-text">ДЕНЬГИ ПОД</span>
+                    <span class="leftBlock-text">ЗАЛОГ КОМЕРЧЕСКОЙ</span>
+                    <div class="leftBlock-text-line">
+                        <span class="leftBlock-text">НЕДВИЖИМОСТИ</span>
+                        <div class="WRLEFT">
+                            <span class="leftBlock-text-s">От 500 000 ₽ до 100 000 000 ₽</span>
+                            <span class="leftBlock-text-s">От 2% в месяц до 5 лет</span>
+                            <span class="leftBlock-text-s">Любая кредитная история</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rightBlock">
+                    <div class="credit-card">
+                        <div class="credit-title">
+                            <span class="credit-title-text">ГАРАНТИЯ</span>
+                            <span class="credit-title-text-s">низкой ставки</span>
+                        </div>
+                        <div class="credit-item">
+                            <img src="images/icons/oplata.svg" alt="credit-card">
+                            <img src="images/icons/Rectangle 3.svg" alt="credit-card">
+                        </div>
+                        <div class="credit-subt">Cardholder</div>
+                    </div>
+                    <img src="images/img/home.png" alt="Здание" class="home-img" />
+                    <img src="images/icons/ruble.svg" alt="Монета" class="coin coin--back" />
+                    <img src="images/icons/ruble.svg" alt="Монета" class="coin coin--front" />
+                </div>
+            </div>
+               <!-- CTA блок у левого края страницы -->
+        <section class="cta">
+            <p class="cta-text">Рассчитайте за 5 минут возможную<br>для вас сумму займа</p>
+            <button class="cta-btn" type="button">
+              <span>Рассчитать сумму займа</span>
+              <span class="cta-arrow">→</span>
+            </button>
+          </section>
+  
+          <!-- Ряд преимуществ -->
+          <section class="benefits">
+            <div class="benefit-item">сумма займа до 70% от рыночной<br>стоимости коммерческой недвижимости</div>
+            <div class="benefit-item">минимальный пакет<br>документов</div>
+            <div class="benefit-item">досрочное погашение без<br>штрафов и пеней</div>
+            <div class="benefit-item">высокий уровень<br>одобрения</div>
+          </section>
+            
+        </div>
+        
+        
+        <!-- Секция: Выдаем займы под личные и бизнес цели -->
+        <section class="loans">
+          <div class="wrapper">
+            <h2 class="loans-title">выдаем займы под<br>личные и бизнес цели</h2>
+
+            <div class="loan-cards">
+              <article class="loan-card loan-card--left">
+                <div class="loan-card__bg" style="background-image:url('images/img/srochno.png')"></div>
+                <div class="loan-card__content">
+                  <h3 class="loan-card__title">срочные займы<br>для ваших задач</h3>
+                  <p class="loan-card__subtitle">В том числе с любой кредитной<br>историей, действующими кредитами</p>
+                  <button class="loan-card__btn" type="button">Подробнее</button>
+                </div>
+              </article>
+
+              <article class="loan-card loan-card--right dark">
+                <div class="loan-card__bg" style="background-image:url('images/img/help.png')"></div>
+                <div class="loan-card__content">
+                  <h3 class="loan-card__title">помогаем решать<br>финансовые задачи бизнеса</h3>
+                  <p class="loan-card__subtitle">Без пачки документов, справок<br>и поручителей</p>
+                  <button class="loan-card__btn" type="button">Подробнее</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Блок: выдаем кредит под залог любой недвижимости -->
+        <section class="estate">
+          <div class="wrapper">
+            <h2 class="estate-title">выдаем кредит под залог<br>любой недвижимости</h2>
+            <div class="estate-grid">
+              <div class="estate-col estate-col--left">
+                <article class="estate-card estate-card--office" style="--bg:#1b7b78">
+                  <div class="estate-card__label">офис</div>
+                  <img src="card-homes/OFC.png" alt="Офис" class="estate-card__img"/>
+                </article>
+                <article class="estate-card estate-card--warehouse" style="--bg:#6c0c63">
+                  <div class="estate-card__label">склад</div>
+                  <img src="card-homes/склад.png" alt="Склад" class="estate-card__img"/>
+                </article>
+                <article class="estate-card estate-card--shop" style="--bg:#259ea1">
+                  <div class="estate-card__label">магазин</div>
+                  <img src="card-homes/магазин.png" alt="Магазин" class="estate-card__img"/>
+                </article>
+              </div>
+              <div class="estate-col estate-col--right">
+                <article class="estate-card estate-card--mall" style="--bg:#7e70ef">
+                  <div class="estate-card__label">торговый центр</div>
+                  <img src="card-homes/ТЦ.png" alt="Торговый центр" class="estate-card__img"/>
+                </article>
+                <article class="estate-card estate-card--factory" style="--bg:#0e213e">
+                  <div class="estate-card__label">завод</div>
+                  <img src="card-homes/завод.png" alt="Завод" class="estate-card__img"/>
+                </article>
+                <article class="estate-card estate-card--land" style="--bg:#7a6b6d">
+                  <div class="estate-card__label">земельный участок<br>под бизнес</div>
+                  <img src="card-homes/участок.png" alt="Земельный участок" class="estate-card__img"/>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Секция формы заявки -->
+        <section class="apply" id="apply">
+          <div class="wrapper">
+            <h2 class="apply-title">рассчитаем условия займа</h2>
+          </div>
+        </section>
+
+        <!-- Специальное предложение для новых клиентов -->
+        <section class="special" id="special">
+          <div class="wrapper">
+            <h2 class="estate-title">специальное предложение<br>для новых клиентов</h2>
+            <div class="special-grid">
+              <div class="special-col special-col--left">
+                <article class="special-card" style="--bg:#1aa7a3; height:700px;">
+                  <div class="special-card__label">0% первые 30 дней</div>
+                  <div class="special-card__media">
+                    <img src="special/precent.png" loading="lazy" decoding="async" alt="0% первые 30 дней"/>
+                  </div>
+                </article>
+                <article class="special-card" style="--bg:#762067; height:700px;">
+                  <div class="special-card__label">недвижимость остаётся <br> в собственности</div>
+                  <div class="special-card__media">
+                    <img src="special/ofis.png" loading="lazy" decoding="async" alt="Офис"/>
+                  </div>
+                </article>
+                <article class="special-card" style="--bg:#1f8f54; height:700px;">
+                  <div class="special-card__label">предоставляем подробный договор</div>
+                  <div class="special-card__media">
+                    <img src="special/dogovor.png" loading="lazy" decoding="async" alt="Договор"/>
+                  </div>
+                </article>
+                <article class="special-card" style="--bg:#1aa7a3; height:550px;">
+                  <div class="special-card__label">лояльно относимся <br> к кредитной истории</div>
+                  <div class="special-card__media">
+                    <img src="special/loalnost.png" loading="lazy" decoding="async" alt="Лояльность"/>
+                  </div>
+                </article>
+              </div>
+
+              <div class="special-col special-col--right">
+                <article class="special-card" style="--bg:#7d76f0; height:700px;">
+                  <div class="special-card__label">первый платёж на 45-й день</div>
+                  <div class="special-card__media b">
+                    <img src="special/oplata.png" loading="lazy" decoding="async" alt="Оплата"/>
+                  </div>
+                </article>
+                <article class="special-card" style="--bg:#6a5a5d; height:700px;">
+                  <div class="special-card__label">срок займа — до 5 лет</div>
+                  <div class="special-card__media">
+                    <img src="special/kalendar.png" loading="lazy" decoding="async" alt="Календарь"/>
+                  </div>
+                </article>
+                <article class="special-card special-card--oficial" style="--bg:#c9493f; height:900px;">
+                  <div class="special-card__label">без подтверждения дохода и <br> официального трудоустройства</div>
+                  <div class="special-card__media special-card__media--stack">
+                    <img class="special-card__img special-card__img--bottom" src="special/oficial-bottom.png" loading="lazy" decoding="async" alt="Документы"/>
+                    <img class="special-card__img special-card__img--top" src="special/oficial_top.png" loading="lazy" decoding="async" alt="Паспорт"/>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Блок: Вы не рискуете и получаете выгодные условия -->
+        <section class="riski" id="riski">
+          <div class="wrapper">
+            <h2 class="riski-title">вы не рискуете и получаете<br>выгодные условия</h2>
+            <div class="riski-grid">
+              <article class="riski-card">
+                <div class="riski-media">
+                  <img src="riski/risk1.png" alt="Займ попадет в ваши ожидания" loading="lazy" decoding="async" />
+                </div>
+                <h3 class="riski-card__title">займ попадет в ваши ожидания</h3>
+                <p class="riski-card__subtitle">Сумма займа до 70% от рыночной стоимости коммерческой недвижимости</p>
+              </article>
+
+              <article class="riski-card">
+                <div class="riski-media">
+                  <img src="riski/risk2.png" alt="Недвижимость остается в собственности" loading="lazy" decoding="async" />
+                </div>
+                <h3 class="riski-card__title">недвижимость остается<br>в собственности</h3>
+                <p class="riski-card__subtitle">Заемщик остается полноправным собственником и может полноценно пользоваться своей недвижимостью</p>
+              </article>
+
+              <article class="riski-card">
+                <div class="riski-media">
+                  <img src="riski/risk3.png" alt="Практически любой возраст" loading="lazy" decoding="async" />
+                </div>
+                <h3 class="riski-card__title">практически любой<br>возраст</h3>
+                <p class="riski-card__subtitle">От 21 года до 65 лет</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Блок: Отвечаем на ваши вопросы (FAQ) -->
+      
+
+        <!-- Блок: Заполните форму, чтобы узнать вероятность выдачи займа -->
+        <section class="probability" id="probability">
+          <div class="wrapper probability__wrap">
+            <div class="probability__left">
+              <h2 class="apply-title">заполните форму, чтобы узнать<br>вероятность выдачи займа</h2>
+
+              <form id="probability-form" class="probability-form" novalidate>
+                <div class="probability-row">
+                  <input type="text" inputmode="numeric" name="credits" placeholder="Количество кредитов" required>
+                </div>
+                <div class="probability-row">
+                  <input type="text" inputmode="numeric" name="payment" placeholder="Сумма ежемесячного платежа" required>
+                </div>
+                <div class="probability-row">
+                  <input type="text" inputmode="numeric" name="income" placeholder="Сумма вашего дохода" required>
+                </div>
+                <div class="probability-row">
+                  <input type="text" name="official" placeholder="Официальный ли у вас доход" required>
+                </div>
+                <div class="probability-row">
+                  <input type="tel" class="wpcf7-tel" name="phone" placeholder="Ваш номер телефона" required>
+                </div>
+
+                <button type="submit" class="cta-btn probability-btn">
+                  <span>Оценить вероятность займа</span>
+                  <span class="cta-arrow">→</span>
+                </button>
+                <p class="probability-note">Я даю согласие на обработку своих персональных данных согласно политике конфиденциальности</p>
+              </form>
+            </div>
+
+            <div class="probability__right">
+              <div class="probability-figure">
+                <img class="probability-img" src="riski/женщина.png" alt="Менеджер" loading="lazy" decoding="async" />
+              </div>
+              <p class="probability-help">Или напишите нашему менеджеру в мессенджеры, чтобы оценить вероятность выдачи займа</p>
+              <div class="probability-contacts">
+                <a class="probability-ic tg" href="http://t.me/89999999999" target="_blank" rel="noopener" aria-label="Telegram">
+                  <img src="riski/tg.svg" alt="Telegram" width="60px" height="60px" />
+                </a>
+                <a class="probability-ic wa" href="https://wa.me/89999999999" aria-label="WhatsApp">
+                  <img src="riski/watsapp.svg" alt="WhatsApp" width="60px" height="60px" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Блок: Сделка пройдёт максимально быстро — в 4 простых шага -->
+        <section class="steps" id="steps">
+          <div class="wrapper">
+            <h2 class="steps-title">сделка пройдёт максимально<br>быстро — в 4 простых шага</h2>
+            <ul class="steps-list">
+              <li class="step step--1">
+                <div class="step-badge">
+                  <span class="step-num">1 шаг</span>
+                  <img class="step-icon" src="images/icons/телефон.svg" alt="Заявка" loading="lazy" decoding="async">
+                </div>
+                <h3 class="step-title">заявка</h3>
+                <p class="step-desc">Оставьте заявку на сайте</p>
+                <button style="width: max-content;" class="cta-btn step-cta" type="button"><span>Оставить заявку</span><span class="cta-arrow">⟶</span></button>
+              </li>
+              <li class="step step--2">
+                <div class="step-badge">
+                  <span class="step-num">2 шаг</span>
+                  <img class="step-icon" src="images/icons/одобрение.svg" alt="Одобрение" loading="lazy" decoding="async">
+                </div>
+                <h3 class="step-title">одобрение</h3>
+                <p class="step-desc">Предоставьте документы и мы оценим объект, чтобы вынести решение по сумме и условия займа</p>
+              </li>
+              <li class="step step--3">
+                <div class="step-badge">
+                  <span class="step-num">3 шаг</span>
+                  <img class="step-icon" src="images/icons/документы.svg" alt="Документы" loading="lazy" decoding="async">
+                </div>
+                <h3 class="step-title">документы</h3>
+                <p class="step-desc">Подготовьте документы и мы проведем сделку дистанционно по ЭЦП или в МФЦ</p>
+              </li>
+              <li class="step step--4">
+                <div class="step-badge">
+                  <span class="step-num">4 шаг</span>
+                  <img class="step-icon" src="images/icons/зачисление.svg" alt="Зачисление средств" loading="lazy" decoding="async">
+                </div>
+                <h3 class="step-title">зачисление средств</h3>
+                <p class="step-desc">Получите деньги наличными или на расчетный счет</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Блок: Гарантируем безопасность. Недвижимость остаётся в собственности -->
+        <section class="safety" id="safety">
+          <div class="wrapper safety__wrap">
+            <div class="safety__left">
+              <h2 class="safety-title">гарантируем безопасность<br>недвижимость остаётся в собственности</h2>
+              <ul class="safety-list">
+                <li>вы остаётесь собственником недвижимости и она находится под защитой договора залога в соответствии с ФЗ‑102</li>
+                <li>работаем по договору строго в соответствии с законодательством РФ</li>
+              </ul>
+            </div>
+            <figure class="safety__right">
+              <img src="images/img/бумага.png" alt="Договор и документы" loading="lazy" decoding="async">
+            </figure>
+          </div>
+        </section>
+
+        <!-- Блок: Честная оценка + калькулятор займа -->
+        <section class="valuation" id="valuation">
+          <div class="wrapper">
+            <div class="valuation__head">
+              <h2 class="valuation-title">честная оценка — получите до 70% от рыночной стоимости коммерческой недвижимости</h2>
+              <div class="valuation__grid">
+                <img class="valuation-img" src="images/img/оценка.png" alt="Здание" loading="lazy" decoding="async" />
+                <div class="valuation-text">
+                  <p>Мы предложим вам лучшие условия и вы сами определите для себя приемлемый срок займа</p>
+                  <p>Процентная ставка зависит от ликвидности объекта залога. Ставку определяем индивидуально для каждого клиента</p>
+                </div>
+              </div>
+            </div>
+
+            <hr class="valuation-sep" />
+
+              <div class="valuation__calc" id="valuation-calc">
+              <h3 class="valuation-subtitle">калькулятор займа</h3>
+
+              <div class="calc-row">
+                <label class="calc-label">Сумма займа</label>
+                <input type="range" id="loanAmount" min="100000" max="10000000" value="150000" step="10000" />
+                <div class="calc-value"><span id="loanAmountValue">150 000 ₽</span></div>
+              </div>
+
+              <div class="calc-row">
+                <label class="calc-label">Срок займа</label>
+                <input type="range" id="loanTerm" min="1" max="60" value="6" step="1" />
+                <div class="calc-value"><span id="loanTermValue">6 месяцев</span></div>
+              </div>
+
+              <form class="valuation-form" id="valuation-form" novalidate>
+                <input type="text" name="name" placeholder="Ваше имя" required />
+                <input type="tel" name="phone" class="wpcf7-tel" placeholder="Ваш телефон" required />
+                <label class="file-uploader">
+                  <input type="file" name="docs" multiple />
+                  <span class="file-hint">Прикрепите ваши документы<br><small>(выписки из ЕГРН, СГРП на объект залога/документы-основание на объект залога/фотографии объекта залога)</small></span>
+                  <span class="file-selected" aria-live="polite"></span>
+                </label>
+                <button class="cta-btn cta-invert" type="submit" data-fancybox data-src="#thanks-modal">
+                  <span>Получить одобрение</span>
+                  <span class="cta-arrow">→</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA: быстрое одобрение в мессенджерах -->
+        <section class="mcta">
+          <div class="wrapper">
+            <div class="mcta__box">
+              <div class="mcta__text">
+                <h2 class="mcta__title">вы можете получить быстро одобрение займа в мессенджерах, отправив всю необходимую информацию и документы</h2>
+                <p class="mcta__subtitle">Воспользуйтесь удобным мессенджером</p>
+              </div>
+              <div class="mcta__actions">
+                <a class="pill-btn" href="http://t.me/89999999999" target="_blank" rel="noopener">Telegram <span class="pill-arrow">→</span></a>
+                <a class="pill-btn" href="whatsapp://send?phone=89999999999">Whatsapp <span class="pill-arrow">→</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+         <!-- Преимущества: работаем понятно и прозрачно -->
+        <section class="features" id="features">
+          <div class="wrapper">
+            <h2 class="features-title">работаем понятно и прозрачно</h2>
+            <ul class="features-grid">
+              <li class="feature">
+                <img src="card-prozrachno/Rectangle 330.png" alt="Примем решение" class="feature-img" loading="lazy" decoding="async" />
+                <p class="feature-text">Примем решение в течение 1 дня</p>
+              </li>
+              <li class="feature">
+                <img src="card-prozrachno/3d-rendered-businessman-front-light-character 1.png" alt="Индивидуальный подход клиенту" class="feature-img" loading="lazy" decoding="async" />
+                <p class="feature-text">Индивидуальный подход клиенту</p>
+              </li>
+              <li class="feature">
+                <img src="card-prozrachno/Rectangle 332.png" alt="Лояльное отношение к кредитной истории" class="feature-img" loading="lazy" decoding="async" />
+                <p class="feature-text">Лояльное отношение к кредитной истории</p>
+              </li>
+
+              <li class="feature">
+                <img src="card-prozrachno/Rectangle 365.png" alt="Удобный способ получения средств" class="feature-img" loading="lazy" decoding="async" />
+                <p class="feature-text">Удобный способ получения денежных средств: наличные или на карту</p>
+              </li>
+              <li class="feature">
+                <img src="card-prozrachno/Rectangle 366.png" alt="Не требуется подтверждения дохода и поручителей" class="feature-img" loading="lazy" decoding="async" />
+                <p class="feature-text">Не требуется подтверждения дохода и поручителей</p>
+              </li>
+              <li class="feature">
+                <img src="card-prozrachno/concentrated-young-bald-call-center-man-holding-looking-documents-isolated-olive-green 1.png" alt="Без дополнительных комиссий и скрытых платежей" class="feature-img" loading="lazy" decoding="async" />
+                <p class="feature-text">Без дополнительных комиссий и скрытых платежей</p>
+              </li>
+
+              <li class="feature">
+                <img src="card-prozrachno/low-angle-teenage-boy-dancing 1.png" alt="Максимальная сумма займа" class="feature-img" loading="lazy" decoding="async" />
+                <p class="feature-text">Максимальная сумма займа до 100 млн руб</p>
+              </li>
+              <li class="feature">
+                <img src="card-prozrachno/Rectangle 368.png" alt="Минимальный пакет документов" class="feature-img" loading="lazy" decoding="async" />
+                <p class="feature-text">Минимальный пакет документов</p>
+              </li>
+              <li class="feature">
+                <img src="card-prozrachno/portrait-charming-brunet-men-white-tshirts-jeans-isolated-man-orange-jacket-show-thump-up-guy-checkered-shirt-show-peace-sign 1.png" alt="Высокий уровень одобрения" class="feature-img" loading="lazy" decoding="async" />
+                <p class="feature-text">Высокий уровень одобрения</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+         <!-- Отзывы клиентов -->
+         <section class="reviews" id="reviews">
+           <div class="wrapper">
+             <div class="reviews-notice">У вас будет персональный менеджер, который 24/7 на связи по телефону и в мессенджерах и готов ответить на любые вопросы. Если возникли сложности, непредвиденные обстоятельства, он поможет вам их решить и подобрать варианты комфортного сотрудничества.</div>
+             <h2 class="reviews-title">посмотрите отзывы наших клиентов, 90% из которых становятся постоянными</h2>
+
+             <div class="reviews-slider">
+               <div class="review-item">
+                 <div class="review-head">Анна К.</div>
+                 <div class="review-body">Обратилась впервые, всё объяснили понятным языком. Деньги получила быстро, условия прозрачные. Спасибо менеджеру!</div>
+               </div>
+               <div class="review-item">
+                 <div class="review-head">Илья М.</div>
+                 <div class="review-body">Понравился индивидуальный подход. Ставка и срок подобраны под мою ситуацию, без скрытых платежей.</div>
+               </div>
+               <div class="review-item">
+                 <div class="review-head">Марина Т.</div>
+                 <div class="review-body">Нужно было срочно закрыть обязательства. Оформили дистанционно, документы подготовили заранее, всё заняло несколько часов.</div>
+               </div>
+               <div class="review-item">
+                 <div class="review-head">Сергей Л.</div>
+                 <div class="review-body">Чёткая работа менеджера на каждом шаге. Рекомендую тем, кому важно быстро и без лишних вопросов.</div>
+               </div>
+               <div class="review-item">
+                 <div class="review-head">Ольга П.</div>
+                 <div class="review-body">Приятно удивила прозрачность — всё как на сайте, без сюрпризов. Теперь сотрудничаем постоянно.</div>
+               </div>
+               <div class="review-item">
+                 <div class="review-head">Влад Д.</div>
+                 <div class="review-body">Не потребовали лишних бумаг, помогли подготовить то, что нужно. Деньги пришли уже на следующий день.</div>
+               </div>
+               <div class="review-item">
+                 <div class="review-head">Екатерина Н.</div>
+                 <div class="review-body">Отличный сервис: вежливо, по делу, всё в срок. Отдельное спасибо за консультации по документам.</div>
+               </div>
+               <div class="review-item">
+                 <div class="review-head">Дмитрий С.</div>
+                 <div class="review-body">Сначала сомневался, но после переговоров и расчётов стало ясно — условия честные. Оформил без проблем.</div>
+               </div>
+               <div class="review-item">
+                 <div class="review-head">Наталья К.</div>
+                 <div class="review-body">Менеджер всегда был на связи, помогал на каждом этапе. Теперь рекомендую друзьям и коллегам.</div>
+               </div>
+             </div>
+             <div class="reviews-arrows">
+               <img class="reviews-arrow reviews-arrow--prev" src="images/icons/Arrow 6.svg" alt="Назад" width="65" height="24" />
+               <img class="reviews-arrow reviews-arrow--next" src="images/icons/Arrow 6.svg" alt="Вперёд" width="65" height="24" />
+             </div>
+
+             <div class="reviews-rating">
+               <p class="reviews-note">наш рейтинг на независимых порталах со строгой модерацией</p>
+               <div class="reviews-score">
+                 <span class="reviews-score-number">4.7</span>
+                 <span class="reviews-stars"><img src="images/icons/Group 314.svg" alt="Рейтинг 5 звёзд" /></span>
+               </div>
+             </div>
+           </div>
+         </section>
+
+        <!-- Блок: Одобрим 99,9% займов при соблюдении условий -->
+        <section class="approve" id="approve">
+          <div class="wrapper approve__container">
+            <h2 class="approve-title">одобрим 99,9% займов,<br>если соблюдены<br>следующие условия</h2>
+            <div class="approve__row">
+              <div class="approve__left">
+                <ul class="approve-list">
+                  <li>Вы гражданин РФ в возрасте от 21 года до 65 лет</li>
+                  <li>Вы собственник недвижимости</li>
+                  <li>На объекте отсутствуют обременения в виде арестов, запретов на регистрационные действия</li>
+                  <li>Недвижимость не находится в залоге</li>
+                </ul>
+              </div>
+              <div class="approve__right">
+                <div class="approve-rows">
+                  <div class="approve-row"><span class="dot"></span><span class="approve-row__text">за 1 рабочий день</span></div>
+                  <div class="approve-row"><span class="dot"></span><span class="approve-row__text">ставка от 2% в месяц</span></div>
+                  <div class="approve-row"><span class="dot"></span><span class="approve-row__text">на срок до 5 лет</span></div>
+                  <div class="approve-row"><span class="dot"></span><span class="approve-row__text">от 500 т.р до 100 млн. руб</span></div>
+                </div>
+              </div>
+            </div>
+            <a href="#valuation-form" class="approve-cta">Получить деньги <img src="images/icons/Arrow 6.svg" alt="→" width="65" height="24"></a>
+          </div>
+        </section>
+
+        <section class="faq" id="faq">
+          <div class="wrapper">
+            <h2 class="faq-title">отвечаем на ваши вопросы<br>развеиваем мифы и страхи<br>относительно займов</h2>
+
+            <ul class="faq-list" role="list">
+              <li class="faq-item">
+                <button class="faq-q" type="button" aria-expanded="false">
+                  <span class="faq-num">01</span>
+                  <span class="faq-text">как быстро я могу получить деньги?</span>
+                  <img class="faq-arrow" src="images/icons/Arrow 6.svg" alt="" width="24" height="24"/>
+                </button>
+                <div class="faq-a" hidden>
+                  <p>Обычно в день обращения. Срок зависит от готовности документов на объект залога; стандартно — 1 рабочий день.</p>
+                </div>
+              </li>
+
+              <li class="faq-item">
+                <button class="faq-q" type="button" aria-expanded="false">
+                  <span class="faq-num">02</span>
+                  <span class="faq-text">могу ли я погасить досрочно?</span>
+                  <img class="faq-arrow" src="images/icons/Arrow 6.svg" alt="" width="24" height="24"/>
+                </button>
+                <div class="faq-a" hidden>
+                  <p>Да, досрочное погашение доступно без штрафов и скрытых комиссий. Проценты пересчитываются пропорционально сроку.</p>
+                </div>
+              </li>
+
+              <li class="faq-item">
+                <button class="faq-q" type="button" aria-expanded="false">
+                  <span class="faq-num">03</span>
+                  <span class="faq-text">как быстро вы снимите залог после погашения займа?</span>
+                  <img class="faq-arrow" src="images/icons/Arrow 6.svg" alt="" width="24" height="24"/>
+                </button>
+                <div class="faq-a" hidden>
+                  <p>Мы подаем необходимые документы в регистрирующий орган в течение 1–3 рабочих дней после полного погашения.</p>
+                </div>
+              </li>
+
+              <li class="faq-item">
+                <button class="faq-q" type="button" aria-expanded="false">
+                  <span class="faq-num">04</span>
+                  <span class="faq-text">что будет если у меня возникнут трудности с платежами?</span>
+                  <img class="faq-arrow" src="images/icons/Arrow 6.svg" alt="" width="24" height="24"/>
+                </button>
+                <div class="faq-a" hidden>
+                  <p>Обсуждаем реструктуризацию: перенос платежа, изменение графика или пролонгацию. Важно заранее связаться с менеджером.</p>
+                </div>
+              </li>
+
+              <li class="faq-item is-open">
+                <button class="faq-q" type="button" aria-expanded="true">
+                  <span class="faq-num">05</span>
+                  <span class="faq-text">я останусь собственником недвижимости?</span>
+                  <img class="faq-arrow" src="images/icons/Arrow 6.svg" alt="" width="24" height="24"/>
+                </button>
+                <div class="faq-a">
+                  <p>Да. Ваша недвижимость находится под защитой договора залога и в соответствии с ФЗ‑102 никто не сможет забрать её у вас.</p>
+                </div>
+              </li>
+            </ul>
+
+           
+        </section>
+
+         <!-- Блок: Остались вопросы? (левая колонка + готовый правый probability__right) -->
+         <section class="questions">
+           <div class="wrapper questions__wrap">
+             <div class="questions__left">
+               <h2 class="questions-title">остались вопросы? наш менеджер с удовольствием на них ответит</h2>
+               <ul class="questions-list">
+                    <li>Поможет рассчитать возможную сумму займа</li>
+                    <li>Определит процентную ставку</li>
+                 <li>Подберёт комфортные условия</li>
+                  </ul>
+               <a href="#valuation-form" class="approve-cta">получить консультацию <img src="images/icons/Arrow 6.svg" alt="→" width="65" height="24"></a>
+
+                </div>
+                
+             <!-- Правый блок: используем существующую разметку probability__right -->
+             <div class="probability__right">
+               <div class="probability-figure">
+                 <img class="probability-img" src="riski/женщина.png" alt="Менеджер" loading="lazy" decoding="async" />
+                  </div>
+               <p class="probability-help">Или напишите нашему менеджеру в мессенджеры, чтобы оценить вероятность выдачи займа</p>
+               <div class="probability-contacts">
+                 <a class="probability-ic tg" href="http://t.me/89999999999" target="_blank" rel="noopener" aria-label="Telegram">
+                   <img src="riski/tg.svg" alt="Telegram" width="60px" height="60px" />
+                 </a>
+                 <a class="probability-ic wa" href="whatsapp://send?phone=89999999999" aria-label="WhatsApp">
+                   <img src="riski/watsapp.svg" alt="WhatsApp" width="60px" height="60px" />
+                 </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+     </main>
+     <a id="thanks-trigger" data-fancybox data-src="#thanks-modal" style="display:none;">thanks</a>
+      
+      <footer class="site-footer">
+        <div class="wrapper footer-top">
+          <div class="footer-logo-col">
+            <a class="footer-logo" href="#">
+              <img src="images/icons/logo.svg" alt="microZaim" width="300" height="64" />
+            </a>
+            <div class="probability-contacts footer-ics">
+              <a class="probability-ic tg" href="http://t.me/89999999999" target="_blank" rel="noopener" aria-label="Telegram">
+                <img src="riski/tg.svg" alt="Telegram" width="60" height="60" />
+              </a>
+              <a class="probability-ic wa" href="https://wa.me/89999999999" aria-label="WhatsApp">
+                <img src="riski/watsapp.svg" alt="WhatsApp" width="60" height="60" />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-cols">
+            <nav class="footer-col" aria-label="Контакты и документы">
+              <a href="#" class="footer-link">Набережные Челны,<br> ул. Машиностроительная, 22 стр. 5</a>
+              <a href="#valuation-form" class="footer-link">Калькулятор займа</a>
+              <a href="#" class="footer-link">Политика конфиденциальности</a>
+            </nav>
+            <nav class="footer-col" aria-label="Режим и соглашения">
+              <a href="#" class="footer-link">Работаем ежедневно<br> с 09:00 до 18:00</a>
+              <a href="#" class="footer-link">Моментальное одобрение</a>
+              <a href="#" class="footer-link">Пользовательское соглашение</a>
+            </nav>
+          </div>
+
+          <div class="footer-contacts">
+            <a class="footer-phone" href="tel:+79520460808">+7 (952) 046-08-08</a>
+          </div>
+        </div>
+        <div class="wrapper footer-bottom">
+          <p class="footer-note">ООО Информация на сайте не является публичной офертой и носит информационно-справочный характер. Содействие в подборе финансовых услуг и организаций оказывает ИП Атласов Д.С ОГРН 322169000037355 ИНН 1650606766562. Сервис, расположенный на доменном имени https://zalogpro.com (далее Веб-сайт) публикует предложения о предоставлении услуг по подбору займов. Веб-сайт не оказывает финансовых услуг и не отвечает за качество услуг, оказываемых компаниями-партнерами. Сайт не несет ответственности за убытки, которые могут возникнуть в отношении Потребителей услуг сайта и организациями партнерами. ИП Атласов Д.С не оказывает финансовых услуг и не отвечает за качество услуг, оказываемых компаниями-партнерами. Услуги по выдаче займов оказывают организации, имеющие на это соответствующие лицензии и разрешения. Веб-сайт размещает информацию по финансовой тематике без предварительной проверки в том объеме, в котором ее предоставили компании-партнеры, а также в тех пределах, которых можно найти в открытых источниках. Компанией- партнером является АО ТБанк.
+            <br>Акционерное общество ТБанк (АО ТБанк)) ОГРН: 1027739642281, ИНН 7710140679. Универсальная лицензия ЦБ РФ №2673
+            <br>Юридический адрес: 127287, Г. МОСКВА, УЛ. 2-Я ХУТОРСКАЯ, ДОМ 38А, СТР. 26
+            <br>Подробные условия займа размещены на официальном https://www.tbank.ru/business/invest-realty/?internal_source=from_business_credit
+            </p>
+        </div>
+      </footer>
+      <div id="thanks-modal" class="modal modal--thanks" style="display:none;">
+        <button class="modal-close" data-fancybox-close aria-label="Закрыть">×</button>
+        <div class="modal-body">
+       
+          <h3 class="modal-title">Спасибо!</h3>
+          <p class="modal-text">Мы с вами свяжемся в ближайшее время</p>
+        </div>
+     </div>
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/jquery.inputmask.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>
