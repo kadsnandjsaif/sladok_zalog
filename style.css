@@ -483,12 +483,19 @@ html { overflow-x: hidden; }
 /* Стек из двух изображений для oficial */
 .special-card__media--stack{ position:absolute; inset:0; overflow:hidden; }
 .special-card__img--bottom,
-.special-card__img--top{
-  position:absolute; inset:0; width:100%; height:100%; max-width:none; max-height:none;
-  object-fit:contain; object-position: center; pointer-events:none;
+.special-card__img--top{    position: absolute;
+  inset: 0;
+  width: 70%;
+  height: 70%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+  left: 15%;
 }
-.special-card__img--bottom{ transform: translateY(40%); }
-.special-card__img--top{ transform: translateY(40%) translateX(6%); transition: transform .25s ease; }
+.special-card__img--bottom{ transform: translateY(25%); }
+.special-card__img--top{ transform: translateY(50%) translateX(6%); transition: transform .25s ease; }
 .special-card--oficial:hover .special-card__img--top{ transform: translateY(44%); }
 
 @media (max-width: 1199px){ .special-col--left{ margin-top: 40px; } }
@@ -546,7 +553,18 @@ margin-top: 50px;
   color: #fff;
 }
 .estate-card__img{
-    margin-top: 15%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    max-width: 90%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    z-index: 1;
 }
 
 /* ===== Riski section ===== */
@@ -938,7 +956,7 @@ margin-top: 50px;
 
 /* Estate slider стили при js-слайдере */
 .estate-slider .estate-card{ width: 560px; max-width: 86vw; height: auto; margin: 0 14px; }
-.estate-slider .estate-card .estate-card__img{ margin-top: 8%; }
+.estate-slider .estate-card .estate-card__img{ margin: 0; }
 .estate-slider, .estate-slider .slick-list{ overflow: hidden; }
 
 /* ===== Features (Понятно и прозрачно) ===== */
@@ -947,10 +965,10 @@ margin-top: 50px;
 
 /* Гибкая сетка без множества медиазапросов */
 .features-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 500px)); gap: 28px; list-style:none; padding:0; margin:0; justify-content:center; }
-.feature{ display:flex; flex-direction:column; align-items:center; text-align:center; width: min(100%, 500px); border-radius:20px; overflow:hidden; background:#fff; contain: content; }
-.feature-img{ width:100%; height: min(52vw, 370px); object-fit:cover; border-radius:20px; transition: transform .35s ease, box-shadow .35s ease, filter .35s ease; will-change: transform, filter; }
+.feature{ display:flex; flex-direction:column; align-items:center; text-align:center; width: min(100%, 500px); border-radius:10px; overflow:hidden; background:#fff; contain: content; transition: transform .35s ease, box-shadow .35s ease, filter .35s linear; will-change: transform, filter;}
+.feature-img{ width:100%; height: min(52vw, 370px); object-fit:cover;  }
 /* Анимируем только изображение: лёгкое приближение и свечения акцентным цветом */
-.feature:hover .feature-img{ transform: scale(1.1);  filter: brightness(1.03) saturate(1.05); }
+.feature:hover { transform: scale(1.05);  filter: brightness(1.03) saturate(1.05); }
 .feature-text{ margin-top:12px; font-family:"Proxima Nova"; font-weight:600; font-size:28px; line-height:140%; color:#2a2f36; }
 
 /* мягкие пороги при необходимости */
