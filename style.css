@@ -457,8 +457,8 @@ html { overflow-x: hidden; }
 .estate{ margin: 80px 0 120px; }
 /* ===== Special section ===== */
 .special{ margin: clamp(24px, 3vw, 40px) 0 clamp(48px, 5vw, 80px); }
-.special-grid{ display:flex; align-items:flex-start; width:100%; gap: clamp(12px, 2vw, 20px); }
-.special-col{ display:flex; flex-direction:column; flex:1 1 50%; min-width:0; }
+.special-grid{ display:flex; align-items:center; width:100%; gap: clamp(12px, 2vw, 20px); }
+.special-col{ display:flex; flex-direction:column; flex:1 1 50%; min-width:0; align-items: center;}
 .special-col--left{ margin-top: clamp(40px, 6vw, 100px); }
 .special-card{
   position: relative;
@@ -506,11 +506,9 @@ html { overflow-x: hidden; }
 }
 
 /* Снижаем высоту карт на адаптивах, перекрывая жесткие высоты */
+
 @media (max-width: 1439px){
-  .special-card{ height: auto !important; min-height: clamp(240px, 28vw, 520px); }
-}
-@media (max-width: 1199px){
-  .special-card{ height: auto !important; min-height: clamp(460px, 34vw, 980px); }
+  .special-card{ height: auto !important; min-height: clamp(500px, 34vw, 980px); }
 }
 .estate-title{
   font-family: "Druk Cyrillic";
@@ -955,7 +953,7 @@ margin-top: 50px;
 }
 
 /* Estate slider стили при js-слайдере */
-.estate-slider .estate-card{ width: 560px; max-width: 86vw; min-height: 500px; margin: 0 14px; }
+.estate-slider .estate-card{ width: 560px; max-width: 84vw; min-height: 500px; margin: 0 14px; }
 .estate-slider .estate-card .estate-card__img{ margin: 0; }
 .estate-slider, .estate-slider .slick-list{ overflow: hidden; }
 
