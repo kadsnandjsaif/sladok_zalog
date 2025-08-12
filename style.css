@@ -510,7 +510,7 @@ html { overflow-x: hidden; }
   .special-card{ height: auto !important; min-height: clamp(240px, 28vw, 520px); }
 }
 @media (max-width: 1199px){
-  .special-card{ height: auto !important; min-height: clamp(220px, 34vw, 480px); }
+  .special-card{ height: auto !important; min-height: clamp(460px, 34vw, 980px); }
 }
 .estate-title{
   font-family: "Druk Cyrillic";
@@ -554,7 +554,7 @@ margin-top: 50px;
 }
 .estate-card__img{
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
@@ -955,7 +955,7 @@ margin-top: 50px;
 }
 
 /* Estate slider стили при js-слайдере */
-.estate-slider .estate-card{ width: 560px; max-width: 86vw; height: auto; margin: 0 14px; }
+.estate-slider .estate-card{ width: 560px; max-width: 86vw; min-height: 500px; margin: 0 14px; }
 .estate-slider .estate-card .estate-card__img{ margin: 0; }
 .estate-slider, .estate-slider .slick-list{ overflow: hidden; }
 
